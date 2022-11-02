@@ -1,0 +1,43 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    @apply flex items-center bg-white w-full h-14 mx-auto shadow-lg;
+    /*  small screens max 640px */
+    @apply flex-col justify-center sm:flex-row sm:justify-between sm:px-8;
+}
+
+.navbar .btn-menu {
+    cursor: pointer;
+    @apply text-gray-800 sm:hidden;
+}
+
+.navbar .logo {
+    @apply hidden ring-gray-800 sm:inline-flex;
+}
+
+.navbar .links {
+    @apply hidden sm:flex;
+}
+
+.navbar .links.show {
+    display: inline-flex!important;
+    position: absolute;
+    top: 57px;
+    left: 0px;
+    width: 100%;
+    @apply bg-white justify-center;
+}
+
+.navbar .links.show .ul{
+    display: flex;
+    flex-direction: column!important;
+    @apply w-full justify-center sm:flex sm:items-center;
+}
+
+.navbar .links.show .ul a{
+    @apply pb-2 text-center w-full shadow-sm;
+}
+
+.navbar .links a {
+    @apply text-gray-800 font-semibold sm:px-2;
+}
